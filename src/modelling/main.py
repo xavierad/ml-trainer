@@ -3,8 +3,8 @@ import torch
 import torch.nn as nn
 from torchvision import transforms
 
-from src.modelling.classifier import Classifier
-from src.modelling.architecture.base import SimpleNN
+from modelling.classifier import Classifier
+from modelling.architecture.base import SimpleNN
 
 seed = 42
 torch.manual_seed(seed)

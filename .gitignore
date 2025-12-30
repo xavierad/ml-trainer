@@ -8,7 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 data
-src/modelling/models/*
+*/models/*
 .Python
 build/
 develop-eggs/

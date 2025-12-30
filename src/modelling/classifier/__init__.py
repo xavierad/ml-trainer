@@ -114,7 +114,7 @@ class Classifier:
         best_weights: Dict[str, Any],
         best_acc: float,
         start_time: float,
-        save_path: str = "src/modelling/models/"
+        save_path: str = "/models"
     ) -> None:
         """Finalize training by loading best weights and saving model."""
         time_elapsed = time() - start_time
