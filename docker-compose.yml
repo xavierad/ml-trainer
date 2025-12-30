@@ -3,7 +3,7 @@ version: '3.8'
 services:
   model-training:
     build:
-      context: ./src/modelling
-      dockerfile: ./Dockerfile
+      context: ./modules/
+      dockerfile: ./modelling_package/Dockerfile
     volumes:
-      - ./src/models/:/models
+      - ./modules/models/:/models

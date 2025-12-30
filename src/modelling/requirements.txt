@@ -1,3 +1,0 @@
-pandas==2.3.3
-pydantic==2.12.5
-tqdm==4.67.1

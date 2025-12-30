@@ -1,5 +1,6 @@
 # modelling requirements
--r src/modelling/requirements.txt
+
+-e modules/modelling_package
 
 # development and version control requirements
 mypy==1.19.1
@@ -8,4 +9,4 @@ pre-commit==4.5.1
 torch==2.9.1+cpu
 -i https://download.pytorch.org/whl/cpu
 torchvision==0.24.1+cpu
-types-tqdm==4.67.0
+types-tqdm>=4.67.0
