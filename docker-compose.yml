@@ -6,4 +6,9 @@ services:
       context: ./modules/
       dockerfile: ./modelling_package/Dockerfile
     volumes:
-      - ./modules/models/:/models
+      - models_volume:/models
+      - data_volume:/data
+
+volumes:
+  models_volume:
+  data_volume:
