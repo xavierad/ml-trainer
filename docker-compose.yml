@@ -5,6 +5,11 @@ services:
     build:
       context: ./modules/
       dockerfile: ./modelling_package/Dockerfile
+    environment:
+      - BATCH_SIZE
+      - EPOCHS
+      - ON_GPU
+    command: python main.py
     volumes:
       - models_volume:/models
       - data_volume:/data

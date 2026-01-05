@@ -1,10 +1,17 @@
 PYTHON_VERSION="3.11"
 
 mypy:
-	mypy src/modelling --config-file mypy.ini --python-version=${PYTHON_VERSION}
+	mypy modules --config-file mypy.ini --python-version=${PYTHON_VERSION}
+
+build:
+	docker compose build
 
 down:
 	docker compose down
 
-up: down 
-	docker compose up --build -d
+train: down 
+	docker compose run --rm \
+		-e BATCH_SIZE=4 \
+		-e EPOCHS=2 \
+		-e ON_GPU=false \
+		model-training
