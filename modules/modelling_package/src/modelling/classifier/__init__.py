@@ -181,9 +181,19 @@ class Classifier:
         # Training completed without early stopping
         self._finalize_training(model, best_model_wts, best_acc, start_time)
 
+    def load(self, folder: str) -> None:
+        """Loads the model to memory. To be implemented by the data scientist.
+        """
+        self.model.load_state_dict(
+            torch.load(
+                os.path.join(folder, f"{self.model_name}_{self.version}.pth"), 
+                weights_only=True
+            )
+        )
+
     def predict(self, data):
-        self.eval()
+        self.model.eval()
         with torch.no_grad():
-            outputs = self(data)
+            outputs = self.model(data)
             return outputs
 
